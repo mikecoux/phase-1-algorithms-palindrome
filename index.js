@@ -1,9 +1,16 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  arr = Array.from(word)
+  reverse = arr.reverse().join('')
+  return word === reverse
 }
+
+console.log(isPalindrome('hey'))
 
 /* 
   Add your pseudocode here
+  pass a string into isPalindrome()
+  use the .reverse() method to return a boolean
 */
 
 /*
@@ -16,7 +23,8 @@ if (require.main === module) {
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
-  console.log("");
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("hey"))
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
